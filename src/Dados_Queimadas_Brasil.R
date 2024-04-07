@@ -10,10 +10,7 @@ library(raster)
 library( spatstat )
 
 path <-
-  "C:/Users/yurim/Desktop/Mestrado/1S2024/Estat Aplicada/Trabalho/data/"
-
-#data <-
-#  fread( paste0( path, "focos_qmd_inpe_20240218_20240219.csv" ))
+  "./data/"
 
 files <- 
   list.files( paste0( path, "raw/" ) )

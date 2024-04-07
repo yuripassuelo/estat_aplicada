@@ -4,13 +4,14 @@ library( tidyverse )
 library( spatstat )
 library( sf )
 library( tigris )
+library( geobr )
 
+# Insert data/inter path
 path <-
-  "C:/Users/yurim/Desktop/Mestrado/1S2024/Estat Aplicada/Trabalho/data/"
+  "./data/"
 
 base <- 
-  readRDS( paste0( path, "/inter/inter_data.rds" ) )
-
+  readRDS( paste0( path, "inter/inter_data.rds" ) )
 
 base_sp <- 
   filter( base, year == 2020, Estado == "SÃO PAULO", RiscoFogo == 1 )

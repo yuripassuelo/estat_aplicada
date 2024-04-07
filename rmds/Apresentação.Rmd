@@ -53,7 +53,7 @@ output:
 
 Todos os scripts e códigos utilizados nessa apresentação ficaram disponíveis por meio do seguinte link:
 
-- \texttt{\url{github.com/yuripassuelo/estat_aplicada}}
+- \texttt{ \url{https://github.com/yuripassuelo/estat_aplicada} }
 
 \end{block}
 
@@ -61,7 +61,7 @@ Todos os scripts e códigos utilizados nessa apresentação ficaram disponíveis
 
 - Antes de adentrar especificamente dentro dos processos de \textit{Poisson} vamos descrever alguns conceitos básicos de um processo pontual.
 
-- Quando dizemos um processo pontual estamos falando da geração de eventos aleatórios que podem se dar por exemplo em uma ou n dimensões com $n \ge 2$.
+- Quando dizemos um processo pontual estamos falando da geração de eventos aleatórios que podem se dar por exemplo em uma ou n dimensões com $n \ge 2$
 
 \textbf{Uma dimensão} Processos por exemplo que mensuramos no tempo, número de passagens num posto de fronteira por minuto, número de clientes que passam por uma bomba por hora.
 
@@ -715,10 +715,11 @@ library( sf )
 # Dados de origem nacional foram compilados de forma manualmente
 # Codigo tratamento dos dados: github.com/yuripassuelo/estat_aplicada/src/processamento.R
 path <-
-  "C:/Users/yurim/Desktop/Mestrado/1S2024/Estat Aplicada/Trabalho/data/"
+  stringr::str_remove( paste0( getwd(), "data/"), 'rmds' )
+
 
 base <- 
-  readRDS( paste0( path, "/inter/inter_data.rds" ) )
+ readRDS( paste0( path, "/inter/inter_data.rds" ) )
 
 
 base_sp <- 
